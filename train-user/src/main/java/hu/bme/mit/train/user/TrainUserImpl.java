@@ -21,7 +21,7 @@ public class TrainUserImpl implements TrainUser {
 		this.controller = controller;
 		
 		Timer timer = new Timer();
-		timer.scheduleAtFixedRate(timerTask,1000,1000);
+		timer.scheduleAtFixedRate(timerTask,0,1000);
 	}
 
 	@Override
