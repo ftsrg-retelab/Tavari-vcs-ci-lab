@@ -50,12 +50,7 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 	
-	@Test
-	public void teszt() {
-		System.out.println("teszt");
-		Trainuser u = getUser();
-		Assert.assertNotEquals(null,u);
-	}
+	
 
 	
 }
