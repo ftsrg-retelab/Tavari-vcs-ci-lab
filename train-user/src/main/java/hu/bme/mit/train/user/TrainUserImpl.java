@@ -10,6 +10,7 @@ public class TrainUserImpl implements TrainUser {
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
+		period();
 	}
 
 	@Override
@@ -26,6 +27,17 @@ public class TrainUserImpl implements TrainUser {
 	public void overrideJoystickPosition(int joystickPosition) {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
+		controller.followSpeed();
+	}
+	
+	public void period() {
+		Timer t = new Timer();
+		t.schedule(new TimerTask() {
+		    @Override
+		    public void run() {
+		       getJoystickPosition();
+		    }
+		}, 0, 1000);
 	}
 
 }
